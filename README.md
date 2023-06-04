@@ -32,8 +32,3 @@ Created bar plots to visualize the model comparison results, emphasizing accurac
 7. Conclusion
 In this project, I leveraged various data science techniques to develop a predictive maintenance solution. The process involved data loading and preprocessing, exploratory data analysis, feature engineering, data split, model training, and evaluation. The models were compared and visualized to identify the best-performing model for predicting component failures.
 
-The code in this repository demonstrates the end-to-end pipeline of the project, highlighting each stage in-depth. It serves as a comprehensive example of how a top data scientist from a big tech company approaches predictive maintenance problems.
-
-Feel free to explore the code, run it, and adapt it for your specific use case. If you have any questions or suggestions, please feel free to reach out.
-
-Happy coding!
