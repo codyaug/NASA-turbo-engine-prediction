@@ -35,12 +35,6 @@ The dataset is split into training and testing sets. Features are scaled using S
 
 Model performance is compared based on accuracy and precision scores. Random Forest and Neural Network models show the highest accuracy and precision, making them suitable choices for predictive maintenance in this scenario.
 
-### Model Accuracy Comparison
-![Model Accuracy](link_to_accuracy_plot_image)
-
-### Model Precision Comparison
-![Model Precision](link_to_precision_plot_image)
-
 ## Conclusion and Future Steps
 
 Predictive maintenance is crucial for industries to minimize downtime and increase operational efficiency. In this project, Random Forest and Neural Network models have demonstrated high accuracy and precision in predicting equipment failures. As a next step, the selected models can be deployed in real-time systems for continuous monitoring. Additionally, further tuning and optimization can be performed to enhance the models' performance. Continuous data collection and model retraining are essential to adapt to changing operational conditions and ensure the effectiveness of predictive maintenance strategies.
