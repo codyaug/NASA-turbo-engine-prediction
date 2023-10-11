@@ -1,34 +1,47 @@
-# NASA-turbo-engine-prediction
-Predictive Maintenance Project
-This project aims to develop a predictive maintenance solution using machine learning techniques. The goal is to predict the failure of certain components in advance, enabling proactive maintenance and minimizing downtime.
+# Predictive Maintenance using Machine Learning Models
 
+## Project Overview
 
-1. Data Loading and Preprocessing
-Loaded the dataset from the file train_FD001.txt into a pandas DataFrame.
-Checked for unused columns and dropped them if necessary.
-Renamed the columns to meaningful names for better understanding.
-Explored the dataset by examining its shape, columns, and the head of the data.
-Conducted descriptive statistics to gain insights into the data distribution and summary statistics.
-Checked for missing values and handled them if present.
-2. Exploratory Data Analysis (EDA)
-Visualized the distribution of the 'cycle' variable using a histogram to understand the data pattern.
-Created a correlation heatmap to identify relationships between different features and target variable.
-3. Feature Engineering
-Engineered new features based on domain knowledge to enhance predictive power.
-Calculated the remaining cycles of each unit.
-Ranked the remaining cycles of each unit to create the "rul" (remaining useful life) feature.
-4. Data Split and Scaling
-Split the dataset into train and test sets using an 80:20 ratio.
-Performed feature scaling using StandardScaler to standardize the input features.
-5. Model Training and Evaluation
-Trained and evaluated multiple machine learning models:
-Logistic Regression
-Decision Tree
-Random Forest
-Neural Network (using Keras)
-6. Model Comparison and Visualization
-Compared the performance of the trained models in terms of accuracy and precision.
-Created bar plots to visualize the model comparison results, emphasizing accuracy and precision scores.
-7. Conclusion
-In this project, I leveraged various data science techniques to develop a predictive maintenance solution. The process involved data loading and preprocessing, exploratory data analysis, feature engineering, data split, model training, and evaluation. The models were compared and visualized to identify the best-performing model for predicting component failures.
+This project focuses on predictive maintenance by utilizing machine learning models to predict equipment failures in advance. The dataset used contains operational parameters and sensor readings from machines. The goal is to predict whether a machine is likely to fail within a certain timeframe, allowing for proactive maintenance and minimizing downtime.
+
+## Data Loading and Preprocessing
+
+The dataset is loaded from a text file, and unnecessary columns (26 and 27) are removed. The columns are then renamed for better understanding of the data. Basic exploratory data analysis is performed to understand the data distribution.
+
+## Exploratory Data Analysis (EDA)
+
+1. **Dataset Shape and Columns**: The dataset consists of 20631 rows and 26 columns. The columns represent various operational parameters and sensor readings.
+2. **Descriptive Statistics**: Statistical summary of the dataset provides insights into the central tendency and dispersion of the features.
+3. **Missing Values**: There are no missing values in the dataset.
+4. **Distribution of Cycles**: A histogram is plotted to visualize the distribution of cycle counts.
+5. **Correlation Heatmap**: A heatmap is generated to understand the correlations between different features, which helps in feature selection.
+
+## Feature Engineering
+
+The target variable, 'failed', is created based on a threshold of remaining cycles. If the remaining cycles are less than or equal to 30, the machine is labeled as 'failed' (1), otherwise 'not failed' (0).
+
+## Model Selection and Training
+
+Four different machine learning models are trained and evaluated:
+
+1. **Logistic Regression**
+2. **Decision Tree Classifier**
+3. **Random Forest Classifier**
+4. **Neural Network (Keras)**
+
+The dataset is split into training and testing sets. Features are scaled using StandardScaler. Each model is trained and evaluated on accuracy and precision scores.
+
+## Model Comparison
+
+Model performance is compared based on accuracy and precision scores. Random Forest and Neural Network models show the highest accuracy and precision, making them suitable choices for predictive maintenance in this scenario.
+
+### Model Accuracy Comparison
+![Model Accuracy](link_to_accuracy_plot_image)
+
+### Model Precision Comparison
+![Model Precision](link_to_precision_plot_image)
+
+## Conclusion and Future Steps
+
+Predictive maintenance is crucial for industries to minimize downtime and increase operational efficiency. In this project, Random Forest and Neural Network models have demonstrated high accuracy and precision in predicting equipment failures. As a next step, the selected models can be deployed in real-time systems for continuous monitoring. Additionally, further tuning and optimization can be performed to enhance the models' performance. Continuous data collection and model retraining are essential to adapt to changing operational conditions and ensure the effectiveness of predictive maintenance strategies.
 
